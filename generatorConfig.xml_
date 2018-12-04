@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!--此配置用于生成实体类,和mapper文件,请参照以下说明-->
+<!--1.Money类型数据库字段大小必须是decimal(>=12,0)-->
+<!--2.Boolean类型数据库字段大小必须是char(1)-->
+<!--3.生成的实体类型全部为包装类型-->
+<!--4.要生成自己的类，只需要修改TODO部分！！！！！！！！！！-->
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <plugin type="clud.qc.bicycle.core.generator.helper.BicycleMapperPlugin">
+            <property name="mappers" value="clud.qc.bicycle.core.groud.mapper.DynamicPageableQueryMapper"/>
+        </plugin>
+
+        <!--生成实体对应的数据库连接-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/banda?useSSL=false" userId="root"
+                        password="123456">
+        </jdbcConnection>
+        <javaTypeResolver type="clud.qc.bicycle.core.generator.helper.JavaTypeResolverImpl"/>
+        <!--实体,必选-->
+        <javaModelGenerator targetPackage="clud.qc.bicycle.entity.{0}"
+                            targetProject="src/main/java">
+            <property name="rootClass" value="clud.qc.bicycle.core.groud.entity.BaseDO"/>
+        </javaModelGenerator>
+
+        <!--xml文件,mapper接口 不需要生成时  可以注释掉-->
+        <sqlMapGenerator targetPackage="mybatis.{0}"
+                         targetProject="src/main/resources"/>
+        <javaClientGenerator targetPackage="clud.qc.bicycle.mapper.{0}"
+                             targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <!--要生成的表,可同时多个,只需要修改TODO部分！！！！！！！！！！-->
+        <table tableName="sys_region">
+            <!--子包名-->
+            <property name="subPackage" value="sys"/>
+            <!-- 生成JPA的DAO的路径,如果不写就不会生成 -->
+            <property name="targetProject" value="ancientry-business/src/main/java"/>
+            <property name="targetPackage" value="clud.qc.bicycle.dao.{0}"/>
+            <!-- 是否生成XML，默认不生成，要就改为true -->
+            <property name="generatedXml" value="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
