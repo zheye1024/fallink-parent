@@ -1,4 +1,4 @@
-package com.fallink.parent.redis;
+package com.fallink.core.redis;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -87,6 +87,7 @@ public class RedisCacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate配置
+     *
      * @param connectionFactory
      * @return
      */

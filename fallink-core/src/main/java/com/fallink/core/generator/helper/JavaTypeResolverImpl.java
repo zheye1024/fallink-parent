@@ -1,6 +1,15 @@
-package com.fallink.parent.generator.helper;
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2016 All Rights Reserved.
+ */
 
-import com.fallink.parent.generator.money.Money;
+/*
+ * 修订记录：
+ * woniu@yiji.com 2017年05月22日 15:37:54 创建
+ */
+package com.fallink.core.generator.helper;
+
+import com.fallink.core.generator.money.Money;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
 import org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl;

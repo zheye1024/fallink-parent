@@ -1,4 +1,13 @@
-package com.fallink.parent.generator.mapper;
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2016 All Rights Reserved.
+ */
+
+/*
+ * 修订记录：
+ * woniu@yiji.com 2017年06月08日 13:35:26 创建
+ */
+package com.fallink.core.generator.groud.mapper;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

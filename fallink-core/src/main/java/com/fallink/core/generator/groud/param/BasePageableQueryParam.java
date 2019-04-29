@@ -7,7 +7,7 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 11:08创建
  */
-package com.fallink.parent.generator.param;
+package com.fallink.core.generator.groud.param;
 
 
 import java.util.Date;

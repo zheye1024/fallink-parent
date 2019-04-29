@@ -1,4 +1,13 @@
-package com.fallink.parent.generator.entity;
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2014 All Rights Reserved.
+ */
+ 
+/*
+ * 修订记录:
+ * zisi@yiji.com:2017-05-22 11:12创建
+ */
+package com.fallink.core.generator.groud.entity;
 
 
 import java.io.Serializable;

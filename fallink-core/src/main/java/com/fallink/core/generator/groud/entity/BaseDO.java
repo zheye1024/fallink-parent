@@ -1,8 +1,16 @@
-package com.fallink.parent.generator.entity;
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2014 All Rights Reserved.
+ */
+ 
+/*
+ * 修订记录:
+ * zisi@yiji.com:2017-05-22 10:57创建
+ */
+package com.fallink.core.generator.groud.entity;
 
-
-import com.fallink.parent.generator.money.Money;
-import com.fallink.parent.generator.money.MoneyType;
+import com.fallink.core.generator.money.Money;
+import com.fallink.core.generator.money.MoneyType;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.TypeDef;

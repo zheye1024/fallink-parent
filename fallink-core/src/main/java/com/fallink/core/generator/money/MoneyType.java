@@ -1,4 +1,4 @@
-package com.fallink.parent.generator.money;
+package com.fallink.core.generator.money;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
@@ -38,7 +38,8 @@ public class MoneyType implements UserType {
     }
 
     @Override
-    public Object nullSafeGet(ResultSet resultSet, String[] strings, SharedSessionContractImplementor session, Object o) throws HibernateException, SQLException {
+    public Object nullSafeGet(ResultSet resultSet, String[] strings, SharedSessionContractImplementor session, Object o) throws
+            HibernateException, SQLException {
         Long value = resultSet.getLong(strings[0]);
         Money m = new Money();
         m.setCent(value);
@@ -46,7 +47,8 @@ public class MoneyType implements UserType {
     }
 
     @Override
-    public void nullSafeSet(PreparedStatement st, Object value, int index, SharedSessionContractImplementor session) throws HibernateException, SQLException {
+    public void nullSafeSet(PreparedStatement st, Object value, int index, SharedSessionContractImplementor session) throws
+            HibernateException, SQLException {
         if (value == null) {
             st.setLong(index, 0L);
             return;

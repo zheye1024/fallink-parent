@@ -7,7 +7,7 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 11:00创建
  */
-package com.fallink.parent.generator.usertype;
+package com.fallink.core.generator.groud.usertype;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.type.BaseTypeHandler;

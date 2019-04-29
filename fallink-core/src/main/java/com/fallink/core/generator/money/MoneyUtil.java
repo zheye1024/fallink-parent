@@ -1,4 +1,4 @@
-package com.fallink.parent.generator.money;
+package com.fallink.core.generator.money;
 
 import com.google.common.math.LongMath;
 import org.springframework.util.Assert;

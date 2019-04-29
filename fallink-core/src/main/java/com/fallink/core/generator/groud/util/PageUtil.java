@@ -2,12 +2,12 @@
  * www.yiji.com Inc.
  * Copyright (c) 2014 All Rights Reserved.
  */
-
+ 
 /*
  * 修订记录:
  * zisi@yiji.com:2017-05-22 11:37创建
  */
-package com.fallink.parent.generator.util;
+package com.fallink.core.generator.groud.util;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,7 +41,7 @@ public class PageUtil {
      */
     public static Pageable getPageable(int page, int pageSize) {
         // JPA pageable的page从0开始
-        return PageRequest.of(page - 1, pageSize);
+        return new PageRequest(page - 1, pageSize);
     }
 
     /**
@@ -54,6 +54,6 @@ public class PageUtil {
      */
     public static Pageable getPageable(int page, int pageSize, Sort sort) {
         // JPA pageable的page从0开始
-        return PageRequest.of(page - 1, pageSize, sort);
+        return new PageRequest(page - 1, pageSize, sort);
     }
 }

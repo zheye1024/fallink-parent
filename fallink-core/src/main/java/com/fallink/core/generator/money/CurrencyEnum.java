@@ -1,4 +1,4 @@
-package com.fallink.parent.generator.money;
+package com.fallink.core.generator.money;
 
 import org.apache.commons.lang3.StringUtils;
 

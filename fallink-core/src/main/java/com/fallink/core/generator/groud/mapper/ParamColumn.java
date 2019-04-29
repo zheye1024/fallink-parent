@@ -1,4 +1,13 @@
-package com.fallink.parent.generator.mapper;
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2016 All Rights Reserved.
+ */
+
+/*
+ * 修订记录：
+ * woniu@yiji.com 2017年06月02日 11:19:34 创建
+ */
+package com.fallink.core.generator.groud.mapper;
 
 
 public class ParamColumn {

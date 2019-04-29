@@ -1,4 +1,13 @@
-package com.fallink.parent.generator.helper;
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2016 All Rights Reserved.
+ */
+
+/*
+ * 修订记录：
+ * woniu@yiji.com 2017年05月23日 16:23:02 创建
+ */
+package com.fallink.core.generator.helper;
 
 import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.*;
@@ -16,7 +25,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.text.MessageFormat;
 import java.util.*;
 
-public class InkMapperPlugin extends PluginAdapter {
+public class BicycleMapperPlugin extends PluginAdapter {
     private Set<String> mappers = new HashSet();
     //注释生成器
     private CommentGeneratorConfiguration commentCfg;
@@ -26,7 +35,7 @@ public class InkMapperPlugin extends PluginAdapter {
         super.setContext(context);
         //设置默认的注释生成器
         commentCfg = new CommentGeneratorConfiguration();
-        commentCfg.setConfigurationType(InkCommentGenerator.class.getCanonicalName());
+        commentCfg.setConfigurationType(BicycleCommentGenerator.class.getCanonicalName());
         context.setCommentGeneratorConfiguration(commentCfg);
     }
 
@@ -122,13 +131,9 @@ public class InkMapperPlugin extends PluginAdapter {
             IntrospectedTable introspectedTable) {
         super.contextGenerateAdditionalJavaFiles(introspectedTable);
         String targetPackage = introspectedTable.getTableConfigurationProperty("targetPackage");
-        String targetProject = introspectedTable.getTableConfigurationProperty("targetProject");
         String subPackage = introspectedTable.getTableConfigurationProperty("subPackage");
         subPackage = subPackage == null ? "" : subPackage;
         if (!StringUtility.stringHasValue(targetPackage)) {
-            return null;
-        }
-        if (!StringUtility.stringHasValue(targetProject)) {
             return null;
         }
         targetPackage = MessageFormat.format(targetPackage, subPackage);
@@ -150,7 +155,8 @@ public class InkMapperPlugin extends PluginAdapter {
         interfaze.addSuperInterface(new FullyQualifiedJavaType(jpaRepository + "<" + entityType.getShortName() + ", String>"));
         interfaze.addImportedType(entityType);
 
-        GeneratedJavaFile gjf = new GeneratedJavaFile(interfaze, targetProject,
+        GeneratedJavaFile gjf = new GeneratedJavaFile(interfaze,
+                "src/main/java",
                 context.getProperty(PropertyRegistry.CONTEXT_JAVA_FILE_ENCODING),
                 context.getJavaFormatter());
         List<GeneratedJavaFile> answer = new ArrayList(1);
