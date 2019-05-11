@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fallink</groupId>
-    <artifactId>fallink-core</artifactId>
+    <artifactId>fallink-generator</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>fallink-core</name>
+    <name>fallink-generator</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
